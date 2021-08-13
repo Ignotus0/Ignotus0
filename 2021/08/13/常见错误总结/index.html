@@ -11,14 +11,14 @@
   
 
 
-  <meta name="description" content="">
+  <meta name="description" content="A newly created blog">
   <meta name="author" content="John F. Xie">
   <meta property="og:title" content="常见错误总结" />
-  <meta property="og:description" content="" />
+  <meta property="og:description" content="A newly created blog" />
   <meta property='og:site_name' content='Ignotus&#39;s Blog' />
   <meta property="og:image" content="http://ignotus0.github.io/img/default.jpg" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:description" content="" />
+  <meta name="twitter:description" content="A newly created blog" />
   <meta name="twitter:title" content="常见错误总结" />
 
   <meta name="twitter:image" content="http://ignotus0.github.io/img/default.jpg" />
@@ -208,6 +208,22 @@
     crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!-- script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
