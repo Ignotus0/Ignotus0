@@ -11,14 +11,14 @@
   
 
 
-  <meta name="description" content="A newly created blog">
+  <meta name="description" content="Always Believe.">
   <meta name="author" content="John F. Xie">
   <meta property="og:title" content="2021.8 模拟赛总结" />
-  <meta property="og:description" content="A newly created blog" />
+  <meta property="og:description" content="Always Believe." />
   <meta property='og:site_name' content='Ignotus&#39;s Blog' />
   <meta property="og:image" content="http://ignotus0.github.io/img/default.jpg" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:description" content="A newly created blog" />
+  <meta name="twitter:description" content="Always Believe." />
   <meta name="twitter:title" content="2021.8 模拟赛总结" />
 
   <meta name="twitter:image" content="http://ignotus0.github.io/img/default.jpg" />
@@ -93,7 +93,8 @@
 <h4 id="B-1"><a href="#B-1" class="headerlink" title="B"></a>B</h4><p>换根 dp，考虑每次换根操作实质上只有连接原节点和新节点的边对整体的贡献改变。首先预处理出以 $1$ 为根时各点的子树大小及其贡献，然后按照 dfs 序换根，换根时只需改变一条边的贡献，统计完成后回溯即可。注意更新答案时考虑字典序的问题。  </p>
 <h4 id="C-1"><a href="#C-1" class="headerlink" title="C"></a>C</h4><p>题意：一棵树开始都是白点，支持将任意一个点反色，每次查询对于任意一个节点，和所有黑点分别求 LCA 时最深的 LCA。<br>结论：每次查询只需要查询在 dfs 序中该节点和其直接前驱后继，比较深度即可。（证明咕了，可以感性理解）<br>用 set 维护 dfs 序中黑点的加入和删除。  </p>
 <h4 id="D-1"><a href="#D-1" class="headerlink" title="D"></a>D</h4><p>用并查集维护每一组限制，考虑将 a, b 分别暴力与其 LCA 合并，即 a, b 到其 LCA 的路径方向一定相同。 若 a, b 不在一条链上则 a -&gt; LCA 与 b -&gt; LCA 的路径方向一定不同，将 a, b 分别与其补集合并。最后统计（原集 + 补集）连通块的个数，若一个点的原集与其补集在同一集合中，则说明矛盾，输出 <code>0</code>。否则将所有连通块个数 / 2，用快速幂计算 $2^{连通块个数 / 2}$ 即可。</p>
-
+<h3 id="8-27"><a href="#8-27" class="headerlink" title="8.27"></a>8.27</h3><p>上午测核酸去了，没交题。  </p>
+<h4 id="A-2"><a href="#A-2" class="headerlink" title="A"></a>A</h4>
             <br />
             <p class="meta">
                 
@@ -164,7 +165,7 @@
 <a class="float-left gradient btn paginationbtn" href="/2021/08/13/常见错误总结/"><i class="fas fa-chevron-left"></i></a>
 
 
-<a class="float-right gradient btn paginationbtn" href="/2021/08/20/To-do-List/"><i class="fas fa-chevron-right"></i></a>
+<a class="float-right gradient btn paginationbtn" href="/2021/11/14/Records 2/"><i class="fas fa-chevron-right"></i></a>
 
     </main>
     <!-- Footer -->
