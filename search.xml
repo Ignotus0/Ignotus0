@@ -42,25 +42,6 @@
     
     
     <entry>
-      <title>2021.8 模拟赛总结</title>
-      <link href="/2021/08/18/2021-8-%E6%A8%A1%E6%8B%9F%E8%B5%9B%E6%80%BB%E7%BB%93/"/>
-      <url>/2021/08/18/2021-8-%E6%A8%A1%E6%8B%9F%E8%B5%9B%E6%80%BB%E7%BB%93/</url>
-      
-        <content type="html"><![CDATA[<h3 id="8-25"><a href="#8-25" class="headerlink" title="8.25"></a>8.25</h3><p>有史以来感觉距离 AK 最近的一次。考场上便想出了四道题的正确思路。</p><h4 id="A"><a href="#A" class="headerlink" title="A"></a>A</h4><p>数据范围到了 $2 \times 10^7$，说明必须用严格 O(n) 的做法才能通过本题。因为不保证模数是质数，所以不能使用前缀积。<br>正解考虑将原序列分块，块长为 $k$，维护块内前缀后缀积，最后 O(1) 查询每个区间的积即可。<br>注意本题空间限制 256MB，所以应使用 <code>int</code> 数组统计答案，取模时强制转换成 <code>long long</code> 即可。  </p><h4 id="B"><a href="#B" class="headerlink" title="B"></a>B</h4><p>逆康托展开模板题，需要套高精，最后一个测试点需要特判以缩小计算的数据范围。  </p><h4 id="C"><a href="#C" class="headerlink" title="C"></a>C</h4><p>题目要求求出使 $\dfrac{N - \frac{1}{2}T}{N - T} (0 &lt; T &lt; N)$ 为整数的所有 $T$。<br>设 $N - \dfrac{1}{2}T = k(N-T)$，则 $(2k - 2)N = (2k - 1)T$。<br>移项得 $T = \dfrac{2k - 2}{2k - 1}N$，且满足 $T$ 为整数。<br>枚举 $N$ 的所有除 $1$ 外的奇数约数即可。 </p><h4 id="D"><a href="#D" class="headerlink" title="D"></a>D</h4><p>首先将优惠后的图建出来。<br>然后两次二分 spfa 判连通性，第一次二分查找使 <code>s</code> 和 <code>t</code> 联通的最大左边界，第二次二分查找在满足第一次已找出的左边界前提下使 <code>s</code> 和 <code>t</code> 联通的最小右边界。  </p><h3 id="8-26"><a href="#8-26" class="headerlink" title="8.26"></a>8.26</h3><h4 id="A-1"><a href="#A-1" class="headerlink" title="A"></a>A</h4><p>结论题，取坐标是所有横纵坐标的中位数（$n$ 为偶数时取靠左、靠上的点）统计答案即可。因为计算曼哈顿距离，所以横纵坐标独立，而上述结论在一维下显然成立。  </p><h4 id="B-1"><a href="#B-1" class="headerlink" title="B"></a>B</h4><p>换根 dp，考虑每次换根操作实质上只有连接原节点和新节点的边对整体的贡献改变。首先预处理出以 $1$ 为根时各点的子树大小及其贡献，然后按照 dfs 序换根，换根时只需改变一条边的贡献，统计完成后回溯即可。注意更新答案时考虑字典序的问题。  </p><h4 id="C-1"><a href="#C-1" class="headerlink" title="C"></a>C</h4><p>题意：一棵树开始都是白点，支持将任意一个点反色，每次查询对于任意一个节点，和所有黑点分别求 LCA 时最深的 LCA。<br>结论：每次查询只需要查询在 dfs 序中该节点和其直接前驱后继，比较深度即可。（证明咕了，可以感性理解）<br>用 set 维护 dfs 序中黑点的加入和删除。  </p><h4 id="D-1"><a href="#D-1" class="headerlink" title="D"></a>D</h4><p>用并查集维护每一组限制，考虑将 a, b 分别暴力与其 LCA 合并，即 a, b 到其 LCA 的路径方向一定相同。 若 a, b 不在一条链上则 a -&gt; LCA 与 b -&gt; LCA 的路径方向一定不同，将 a, b 分别与其补集合并。最后统计（原集 + 补集）连通块的个数，若一个点的原集与其补集在同一集合中，则说明矛盾，输出 <code>0</code>。否则将所有连通块个数 / 2，用快速幂计算 $2^{连通块个数 / 2}$ 即可。</p><h3 id="8-27"><a href="#8-27" class="headerlink" title="8.27"></a>8.27</h3><p>上午测核酸去了，没交题。  </p><h4 id="A-2"><a href="#A-2" class="headerlink" title="A"></a>A</h4>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Summary </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>常见错误总结</title>
       <link href="/2021/08/13/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/"/>
       <url>/2021/08/13/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/</url>
