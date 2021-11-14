@@ -197,14 +197,6 @@
 <li>设 $b_1,b_2,\cdots,b_m$ 为成功插入线性基的下标，对于任意 $(b_i,b_j)$ 的异或值均不为 $0$，而这恰好是 $pre$ 中某一段的异或和，因此任意段异或和不为 $0$。  </li>
 </ul>
 </li>
-</ol>
-<ul>
-<li>1029 模拟赛  <ul>
-<li>挂大分。T2 开 <code>long long</code> 之后没有重新算空间导致 MLE，T3 没删调试。反思挂分原因，绝对不能再出现此类情况。$272 \rightarrow 112$ <img src="//图.tk/0" alt="">  </li>
-</ul>
-</li>
-</ul>
-<ol>
 <li><p>P3041 [USACO12JAN] Video Game G (2/2)  </p>
 <ul>
 <li>AC 自动机上 dp，套路地有 $f_{i,j}$ 为当前考虑到第 $i$ 位，在 trie 树上走到 $j$ 号节点时的最大得分。记每个单词结尾点 $i$ 有分值为 $ed_i$，则对于每个节点更新 fail 时要直接加上其 fail 的分值。转移方程 $f_{i,tr_{j,son}}=\max\{f_{i-1,j}+ed_{tr_{j,son}}\}$。  </li>
@@ -483,20 +475,26 @@
 <li>考虑构造一个 $26\times 26$ 的矩阵，原串里如果 $i,j$ 相邻则 $A_{i,j}=0$，否则 $A_{i,j}=1$。答案为 $A^{n-1}$。</li>
 </ul>
 </li>
-</ol>
-<ol>
-<li>P5319 [BJOI2019] 奥术神杖</li>
-</ol>
-<ol>
-<li>CF464E The Classic Problem</li>
-</ol>
-<ol>
-<li>P2900 [USACO08MAR] Land Acquisition G</li>
-</ol>
-<ol>
-<li>P3195 [HNOI2008] 玩具装箱</li>
-</ol>
-<ol>
+<li><p>P5319 [BJOI2019] 奥术神杖</p>
+<ul>
+<li>Placeholder</li>
+</ul>
+</li>
+<li><p>CF464E The Classic Problem</p>
+<ul>
+<li>Placeholder</li>
+</ul>
+</li>
+<li><p>P2900 [USACO08MAR] Land Acquisition G</p>
+<ul>
+<li>Placeholder</li>
+</ul>
+</li>
+<li><p>P3195 [HNOI2008] 玩具装箱</p>
+<ul>
+<li>Placeholder</li>
+</ul>
+</li>
 <li><p>CF240F TorCoder (3/3)</p>
 <ul>
 <li>对于每个区间修改，直接统计字符出现个数后判断奇偶，从 a 到 z 重构。对于字符集中的每个字符开一个线段树，代表这个区间内有多少个该字符。</li>
@@ -569,9 +567,10 @@
 </ul>
 </li>
 <li><p>P4133 [BJOI2012] 最多的方案</p>
+<ul>
+<li>Placeholder</li>
+</ul>
 </li>
-</ol>
-<ol>
 <li><p>1110 模拟赛 - 1 图 (2/1)</p>
 <ul>
 <li>非常直接的思路。考虑 bfs 过程中将 $s$ 到 $t$ 的最短路上每条边均染成不同的颜色，这样一定是最优的。bfs 过程中注意到 $t$ 了一定要直接 return，且尽可能少地留下不染色的边。</li>
@@ -666,34 +665,55 @@
 </ul>
 </li>
 <li><p>P4105 [HEOI2014]南园满地堆轻絮 (2/1)</p>
+<ul>
+<li>Placeholder</li>
+</ul>
 </li>
-</ol>
-<ol>
-<li>P1772 [ZJOI2006] 物流运输 (3/3)</li>
-</ol>
-<ol>
-<li>P2467 [SDOI2010] 地精部落 (4/1)</li>
-</ol>
-<ol>
-<li>LOJ #2873. 「JOISC 2014 Day1」有趣的家庭菜园 (3/2)</li>
-</ol>
-<ol>
-<li>P2319 [HNOI2006] 超级英雄 (2/2)</li>
-</ol>
-<ol>
-<li>XJOI 1113 - A (2/2)</li>
-</ol>
-<ol>
-<li>P3225 [HNOI2012] 矿场搭建 (3/3)</li>
-</ol>
-<ol>
-<li>P5854 【模板】笛卡尔树 (2/1)</li>
-</ol>
-<ol>
-<li>P5091 【模板】扩展欧拉定理 (3/1)</li>
-</ol>
-<ol>
-<li>P7771 【模板】欧拉路径 (2/2)</li>
+<li><p>P1772 [ZJOI2006] 物流运输 (3/3)</p>
+<ul>
+<li>Placeholder</li>
+</ul>
+</li>
+<li><p>P2467 [SDOI2010] 地精部落 (4/1)</p>
+<ul>
+<li>Placeholder</li>
+</ul>
+</li>
+<li><p>LOJ #2873. 「JOISC 2014 Day1」有趣的家庭菜园 (3/2)</p>
+<ul>
+<li>Placeholder</li>
+</ul>
+</li>
+<li><p>P2319 [HNOI2006] 超级英雄 (2/2)</p>
+<ul>
+<li>Placeholder</li>
+</ul>
+</li>
+<li><p>XJOI 1113 - A (2/2)</p>
+<ul>
+<li>Placeholder</li>
+</ul>
+</li>
+<li><p>P3225 [HNOI2012] 矿场搭建 (3/3)</p>
+<ul>
+<li>Placeholder</li>
+</ul>
+</li>
+<li><p>P5854 【模板】笛卡尔树 (2/1)</p>
+<ul>
+<li>Placeholder</li>
+</ul>
+</li>
+<li><p>P5091 【模板】扩展欧拉定理 (3/1)</p>
+<ul>
+<li>Placeholder</li>
+</ul>
+</li>
+<li><p>P7771 【模板】欧拉路径 (2/2)</p>
+<ul>
+<li>Placeholder</li>
+</ul>
+</li>
 </ol>
 
             <br />
