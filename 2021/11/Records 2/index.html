@@ -6,7 +6,7 @@
   
   <title>
     Records 2 |
-    Ignotus&#39;s Blog
+    Ignotus&#39;s
   </title>
   
 
@@ -15,7 +15,7 @@
   <meta name="author" content="John F. Xie">
   <meta property="og:title" content="Records 2" />
   <meta property="og:description" content="It&#39;s the daily surprise that matters." />
-  <meta property='og:site_name' content='Ignotus&#39;s Blog' />
+  <meta property='og:site_name' content='Ignotus&#39;s' />
   <meta property="og:image" content="http://ignotus0.github.io/img/default.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:description" content="It&#39;s the daily surprise that matters." />
@@ -42,7 +42,7 @@
     <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark page-navbar gradient">
   <div class="container">
     <a class="navbar-brand logo" href="http://ignotus0.github.io">
-      Ignotus&#39;s Blog</a>
+      Ignotus&#39;s</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -58,17 +58,17 @@
         
         <li class="nav-item item">
           <a class="nav-link" href="/archives">
-            🗂️Archives</a>
-        </li>
-        
-        <li class="nav-item item">
-          <a class="nav-link" target="_blank" rel="noopener" href="https://hexo.io/">
-            Hexo</a>
+            Archives</a>
         </li>
         
         <li class="nav-item item">
           <a class="nav-link" target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/197717">
             Luogu Homepage</a>
+        </li>
+        
+        <li class="nav-item item">
+          <a class="nav-link" target="_blank" rel="noopener" href="https://hexo.io/">
+            Hexo</a>
         </li>
         
         </li>
@@ -107,7 +107,7 @@
 <li><p>CF981D Bookshelves (3/1)  </p>
 <ul>
 <li>贪心地考虑，高位选 $1$ 肯定比低位都选 $1$ 要更优，所以从高位向低位进行 dp。</li>
-<li>我们希望验证当前枚举到的 $x$ 是否能够作为答案，设 $f_{i,j}$ 为前 $i$ 本书放在 $j$ 个书架上能否组成 $x$，转移为 $f_{i,j} |!=f_{k,j-1} \&amp; [(\sum\limits_{p=k+1}^{i}!!\&amp; x)=x]$。  </li>
+<li>我们希望验证当前枚举到的 $x$ 是否能够作为答案，设 $f_{i,j}$ 为前 $i$ 本书放在 $j$ 个书架上能否组成 $x$，转移为 $f_{i,j} |=f_{k,j-1} \&amp; [(\sum\limits_{p=k+1}^{i}\&amp; x)=x]$。  </li>
 </ul>
 </li>
 <li><p>P4377 [USACO18OPEN] Talent Show G (3/2)  </p>
@@ -306,7 +306,7 @@
 <ul>
 <li>贴一个题解的分析： </li>
 </ul>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/lvtt0luh.png" alt>  </p>
+<p><img src="/2021/11/Records%202/Sol1.png" alt>  </p>
 </li>
 <li><p>CF40E Number Table (4/1)  </p>
 <ul>
@@ -557,7 +557,7 @@
 <ul>
 <li>题意是要求出一个树形图的不同的拓扑序个数。</li>
 <li>发现将原问题考虑成树形图将不好处理，所以直接在树上考虑树形 dp，对两种方向分别转移。设 $f_{u,i}$ 为在当前加进 $u$ 的子树中 $u$ 在子树的拓扑序排名为 $i$。</li>
-<li>将子树 $v$ 连到子树 $u$ 上，考虑两种情况：$u,v$ 之间的连边方向 $v$ 连向 $u$ 还是 $u$ 连向 $v$。贴张题解的分析：<img src="https://cdn.luogu.com.cn/upload/image_hosting/527gpdrk.png" alt></li>
+<li>将子树 $v$ 连到子树 $u$ 上，考虑两种情况：$u,v$ 之间的连边方向 $v$ 连向 $u$ 还是 $u$ 连向 $v$。贴张题解的分析：<img src="/2021/11/Records%202/Sol2.png" alt></li>
 <li>最后将与 $p$ 有关的项提出来，将 $f_{v,q}$ 前缀和优化一下，可以做到 $\Theta(n^2)$。</li>
 </ul>
 </li>
@@ -628,7 +628,7 @@
 </li>
 <li><p>P1131 [ZJOI2007] 时态同步 (3/2)</p>
 <ul>
-<li>贴一张绝妙的图解释本题的做法：<img src="https://cdn.luogu.com.cn/upload/pic/34776.png" alt></li>
+<li>贴一张绝妙的图解释本题的做法：<img src="/2021/11/Records%202/Sol3.png" alt></li>
 <li>dfs 累加每次调整的代价。</li>
 </ul>
 </li>
@@ -639,7 +639,7 @@
 </li>
 <li><p>CF468C Hack it! (4/0)</p>
 <ul>
-<li>发现 $\forall a &lt; 10^{18}$，把 $[0,10^{18})$ 替换成 $[a,10^{18}+a)$，总代价会增加 $a$，所以有 $\sum\limits_{i=a-p}^{10^{18}+a-p-1}f_i\equiv 0 (!!!!\mod a)$，即 $l=a-p,r=10^{18}+a-p-1$ 时满足条件。</li>
+<li>发现 $\forall a &lt; 10^{18}$，把 $[0,10^{18})$ 替换成 $[a,10^{18}+a)$，总代价会增加 $a$，所以有 $\sum\limits_{i=a-p}^{10^{18}+a-p-1}f_i\equiv 0 \mod a$，即 $l=a-p,r=10^{18}+a-p-1$ 时满足条件。</li>
 </ul>
 </li>
 <li><p>P5903 【模板】树上 k 级祖先 (1/2，倍增做法)  </p>
@@ -719,6 +719,26 @@
 <li>Placeholder</li>
 </ul>
 </li>
+<li><p>1115 模拟赛 - 1 mark (2/1)</p>
+<ul>
+<li>将原序列排序，双指针维护。二分最大差值，头指针右移的过程中如果与尾指针所指向的元素之差大于二分值则将尾指针右移。最后统计答案时加上二分位置右侧的一些值补全 $k$ 对。</li>
+</ul>
+</li>
+<li><p>1115 模拟赛 - 2 gift (2/3)</p>
+<ul>
+<li>显然的状压 dp。先 bfs 求出所有礼物两两之间以及与起始、中止节点的距离，再状压，设 $f_{i,S}$ 为已经取了集合为 $S$ 的礼物，上一个取了 $i$ 的最短时间。</li>
+</ul>
+</li>
+<li><p>1115 模拟赛 - 3 game (3/2)</p>
+<ul>
+<li>一个点能吃到其父亲节点的坚果当且仅当比它浅的节点都不选。树剖 + 线段树逐层维护。</li>
+</ul>
+</li>
+<li><p>1115 模拟赛 - 4 medicine (3/2)</p>
+<ul>
+<li>树上背包套路化地利用 dfn 序映射成序列上的 01 背包 $\Theta(n^2)$ 处理。</li>
+</ul>
+</li>
 </ol>
 
             <br />
@@ -736,6 +756,13 @@
 <span><b> Welcome!</b></span>
 <p>
 	Hang around and make yourself at home.
+</p>
+<hr />
+
+
+<span><b> Updates may be slow</b></span>
+<p>
+	Due to unstable connection to GitHub, blog posts may not be up-to-date.
 </p>
 <hr />
 
@@ -776,7 +803,7 @@
   <div class="container">
     <div class="social-icons">
       
-      <a href="https://ignotus0.github.io/" title="Hexo.io" target="_blank" rel="noopener" class="fas fa-home"></a>
+      <a href="https://ignotus0.github.io/" title="Home" target="_blank" rel="noopener" class="fas fa-home"></a>
       
       <a href="https://github.com/RandomAdversary/Gradient/issues" title="Report issue" target="_blank" rel="noopener" class="fas fa-bug"></a>
       
