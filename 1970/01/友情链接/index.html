@@ -5,21 +5,21 @@
 
   
   <title>
-    常见错误总结 |
+    Friends Link |
     Ignotus&#39;s
   </title>
   
 
 
-  <meta name="description" content="I stood tall and proud on the place I fell.">
+  <meta name="description" content="United we are strong.">
   <meta name="author" content="John F. Xie">
-  <meta property="og:title" content="常见错误总结" />
-  <meta property="og:description" content="I stood tall and proud on the place I fell." />
+  <meta property="og:title" content="Friends Link" />
+  <meta property="og:description" content="United we are strong." />
   <meta property='og:site_name' content='Ignotus&#39;s' />
   <meta property="og:image" content="http://ignotus0.github.io/img/default.jpg" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:description" content="I stood tall and proud on the place I fell." />
-  <meta name="twitter:title" content="常见错误总结" />
+  <meta name="twitter:description" content="United we are strong." />
+  <meta name="twitter:title" content="Friends Link" />
 
   <meta name="twitter:image" content="http://ignotus0.github.io/img/default.jpg" />
 
@@ -87,67 +87,21 @@
     <div class="row">
         <div class="col-sm-9 px-md-5">
             <h2 class="blog-post-title">
-                常见错误总结
+                Friends Link
             </h2>
             <p class="meta">
                 <i class="far fa-clock"></i>
-                2021-08-13 
+                1970-01-01 
             </p>
             <!-- Content -->
-            <p>持续更新中~</p>
-<h4 id="0-文件输入-输出"><a href="#0-文件输入-输出" class="headerlink" title="0. 文件输入/输出"></a>0. 文件输入/输出</h4><ul>
-<li>大型考试中，严格加 <code>freopen</code>，同时注意要将输入输出的文件名写对，一定记得删掉测大样例时输入的文件名后缀。</li>
-<li>校内OJ模拟赛时，测完大样例记得删掉 <code>freopen</code>，或在文件前后使用 <code>#ifndef ONLINE_JUDGE</code>。洛谷也不支持文件I/O。</li>
-<li>loj上明确写有＂文件I/O＂的要加文件输入输出。</li>
-</ul>
-<h4 id="1-死循环-不出结果"><a href="#1-死循环-不出结果" class="headerlink" title="1. 死循环/不出结果"></a>1. 死循环/不出结果</h4><ul>
-<li>快读写错。</li>
-<li><code>scanf</code> 忘写取址符 <code>&amp;</code>。  </li>
-<li>多测未赋初值/未清空导致死循环（尤其注意 <code>head</code>、<code>tag</code> 等数组是否清空）。</li>
-<li>在一棵 1 ~ n - 1 的树上深搜到 0 号节点导致死循环。  </li>
-<li>深搜某些条件没有 <code>return</code> 导致死循环。  </li>
-<li>循环条件写错如：<code>for(int j = 1; j &lt;= i; ++i)</code> 之类。  </li>
-<li>网络流 <code>dis</code> 初始化没有使用 <code>memset</code> 导致没有将全部节点的初始 <code>dis</code> 设置为 <code>INF</code>。  </li>
-<li>慎用 <code>~i</code> 代替 <code>i &gt;= 0</code>，可能会因为边界出现一些不希望的死循环问题。</li>
-</ul>
-<h4 id="2-WA"><a href="#2-WA" class="headerlink" title="2. WA"></a>2. WA</h4><ul>
-<li>没有注意数据范围，该开 long long 要开。  </li>
-<li>线段树 <code>pushdown</code> 写挂。  </li>
-<li>取模取挂。  </li>
-<li>如果一直输出 <code>0</code>，检查：<ul>
-<li>快读是不是 <code>return</code> 了读入的数。  <ul>
-<li>是否少读入了某些数。  </li>
-<li>结果为连乘积的时候，<code>ans</code> 的初值是否为 <code>1</code>。  </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>试图 <code>1 &lt;&lt; 32</code> 或 <code>1ll &lt;&lt; 63</code>。  </li>
-<li>位运算未注意优先级。  </li>
-<li>组合数运算时将 <code>fac[n]</code> 写成 <code>n</code>。  </li>
-<li>背包未继承上一层的值导致错误（<code>f[i][j] = f[i - 1][j]</code>）。</li>
-<li>BST 查找右子树排名 <code>k</code> 时减去左子树的 <code>siz</code> 后没有 +1。  </li>
-<li>网络流初始时 <code>cnt</code> 未赋为 <code>1</code>。</li>
-<li>没有删调试语句。  </li>
-<li>没有看清模数。  </li>
-<li><code>siz[y] += siz[x]</code> 之类（写反）。  </li>
-<li>AC 自动机建 fail 树 dfs 时误将 1 当作根节点（<code>dfs(0)</code> 而不是 <code>dfs(1)</code>）  </li>
-<li><code>__builtin_popcount</code> 的范围是 unsigned int，long long 范围内要用 <code>__builtin_popcountll</code>。  </li>
-<li>dfn 序需要映射回原数。（取 id，不是 dfn 序本身）</li>
-<li>检查 vis 数组在该使用 int 类型时是否适用了 bool。</li>
-</ul>
-<h4 id="3-RE"><a href="#3-RE" class="headerlink" title="3. RE"></a>3. RE</h4><ul>
-<li>数组访问越界。</li>
-<li>线段树处理不好的话需要开 $8$ 倍空间。  </li>
-<li>洛谷日爆。</li>
-</ul>
+            <p><a target="_blank" rel="noopener" href="https://shu-kuang.github.io"><img src="/1970/01/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/168223.png" alt="ShuKuang"></a> <a href="xixike.github.io"><img src="/1970/01/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/158846.png" alt="xixike"></a> <a target="_blank" rel="noopener" href="https://www.cnblogs.com/acestar/"><img src="/1970/01/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/211300.png" alt="Acestar"></a></p>
 
             <br />
             <p class="meta">
                 
 
-<a href="/tags/Records/"> <i class="fas fa-tags"></i>
-    Records </a>
+<a href="/tags/Friends/"> <i class="fas fa-tags"></i>
+    Friends </a>
 
             </p>
         </div>
@@ -195,10 +149,8 @@
 </script>
 
 
-<a class="float-left gradient btn paginationbtn" href="/2021/08/CSP 2020/"><i class="fas fa-chevron-left"></i></a>
 
-
-<a class="float-right gradient btn paginationbtn" href="/2021/11/CSP 2021/"><i class="fas fa-chevron-right"></i></a>
+<a class="float-right gradient btn paginationbtn" href="/2021/08/hello-world/"><i class="fas fa-chevron-right"></i></a>
 
     </main>
     <!-- Footer -->
