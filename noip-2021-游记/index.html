@@ -5,21 +5,21 @@
 
   
   <title>
-    常见错误总结 |
+    NOIP 2021 游记 |
     Ignotus&#39;s
   </title>
   
 
 
-  <meta name="description" content="I stood tall and proud on the place I fell.">
+  <meta name="description" content="Some million miles away, our destiny shines.">
   <meta name="author" content="John F. Xie">
-  <meta property="og:title" content="常见错误总结" />
-  <meta property="og:description" content="I stood tall and proud on the place I fell." />
+  <meta property="og:title" content="NOIP 2021 游记" />
+  <meta property="og:description" content="Some million miles away, our destiny shines." />
   <meta property='og:site_name' content='Ignotus&#39;s' />
   <meta property="og:image" content="http://ignotus0.github.io/img/default.jpg" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:description" content="I stood tall and proud on the place I fell." />
-  <meta name="twitter:title" content="常见错误总结" />
+  <meta name="twitter:description" content="Some million miles away, our destiny shines." />
+  <meta name="twitter:title" content="NOIP 2021 游记" />
 
   <meta name="twitter:image" content="http://ignotus0.github.io/img/default.jpg" />
 
@@ -86,67 +86,33 @@
     <div class="row">
         <div class="col-sm-9 px-md-5">
             <h2 class="blog-post-title">
-                常见错误总结
+                NOIP 2021 游记
             </h2>
             <p class="meta">
                 <i class="far fa-clock"></i>
-                2021-08-13 
+                2021-11-29 
             </p>
             <!-- Content -->
-            <p>持续更新中~</p>
-<h4 id="0-文件输入-输出"><a href="#0-文件输入-输出" class="headerlink" title="0. 文件输入/输出"></a>0. 文件输入/输出</h4><ul>
-<li>大型考试中，严格加 <code>freopen</code>，同时注意要将输入输出的文件名写对，一定记得删掉测大样例时输入的文件名后缀。</li>
-<li>校内OJ模拟赛时，测完大样例记得删掉 <code>freopen</code>，或在文件前后使用 <code>#ifndef ONLINE_JUDGE</code>。洛谷也不支持文件I/O。</li>
-<li>loj上明确写有＂文件I/O＂的要加文件输入输出。</li>
-</ul>
-<h4 id="1-死循环-不出结果"><a href="#1-死循环-不出结果" class="headerlink" title="1. 死循环/不出结果"></a>1. 死循环/不出结果</h4><ul>
-<li>快读写错。</li>
-<li><code>scanf</code> 忘写取址符 <code>&amp;</code>。  </li>
-<li>多测未赋初值/未清空导致死循环（尤其注意 <code>head</code>、<code>tag</code> 等数组是否清空）。</li>
-<li>在一棵 1 ~ n - 1 的树上深搜到 0 号节点导致死循环。  </li>
-<li>深搜某些条件没有 <code>return</code> 导致死循环。  </li>
-<li>循环条件写错如：<code>for(int j = 1; j &lt;= i; ++i)</code> 之类。  </li>
-<li>网络流 <code>dis</code> 初始化没有使用 <code>memset</code> 导致没有将全部节点的初始 <code>dis</code> 设置为 <code>INF</code>。  </li>
-<li>慎用 <code>~i</code> 代替 <code>i &gt;= 0</code>，可能会因为边界出现一些不希望的死循环问题。</li>
-</ul>
-<h4 id="2-WA"><a href="#2-WA" class="headerlink" title="2. WA"></a>2. WA</h4><ul>
-<li>没有注意数据范围，该开 long long 要开。  </li>
-<li>线段树 <code>pushdown</code> 写挂。  </li>
-<li>取模取挂。  </li>
-<li>如果一直输出 <code>0</code>，检查：<ul>
-<li>快读是不是 <code>return</code> 了读入的数。  <ul>
-<li>是否少读入了某些数。  </li>
-<li>结果为连乘积的时候，<code>ans</code> 的初值是否为 <code>1</code>。  </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>试图 <code>1 &lt;&lt; 32</code> 或 <code>1ll &lt;&lt; 63</code>。  </li>
-<li>位运算未注意优先级。  </li>
-<li>组合数运算时将 <code>fac[n]</code> 写成 <code>n</code>。  </li>
-<li>背包未继承上一层的值导致错误（<code>f[i][j] = f[i - 1][j]</code>）。</li>
-<li>BST 查找右子树排名 <code>k</code> 时减去左子树的 <code>siz</code> 后没有 +1。  </li>
-<li>网络流初始时 <code>cnt</code> 未赋为 <code>1</code>。</li>
-<li>没有删调试语句。  </li>
-<li>没有看清模数。  </li>
-<li><code>siz[y] += siz[x]</code> 之类（写反）。  </li>
-<li>AC 自动机建 fail 树 dfs 时误将 1 当作根节点（<code>dfs(0)</code> 而不是 <code>dfs(1)</code>）  </li>
-<li><code>__builtin_popcount</code> 的范围是 unsigned int，long long 范围内要用 <code>__builtin_popcountll</code>。  </li>
-<li>dfn 序需要映射回原数。（取 id，不是 dfn 序本身）</li>
-<li>检查 vis 数组在该使用 int 类型时是否适用了 bool。</li>
-</ul>
-<h4 id="3-RE"><a href="#3-RE" class="headerlink" title="3. RE"></a>3. RE</h4><ul>
-<li>数组访问越界。</li>
-<li>线段树处理不好的话需要开 $8$ 倍空间。  </li>
-<li>洛谷日爆。</li>
-</ul>
+            <p>但热闹是它们的，我什么也没有。 ——朱自清《荷塘月色》</p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>自己终究还是没有足够的实力去在大赛中发挥到最好，无论在心态上、考试策略上、大赛经验上还是硬实力上，大概都还没有到自己想要的程度吧。<br>因为疫情，没有能去燕山大学考试，HE 在 sjzez 和衡水设了分赛场，在本校考的试。</p>
+<h3 id="Day-24"><a href="#Day-24" class="headerlink" title="Day -24"></a>Day -24</h3><p>正式决定停课，写好了请假条，把班里的东西都放回了家。</p>
+<h3 id="Day-23-Day-3"><a href="#Day-23-Day-3" class="headerlink" title="Day -23 ~ Day -3"></a>Day -23 ~ Day -3</h3><p>在各种模拟赛中被吊打，没有比赛的时候做教练留的题单或者高二学长讲的题。<br>模拟赛最高挂分纪录：$160$</p>
+<h3 id="Day-2"><a href="#Day-2" class="headerlink" title="Day -2"></a>Day -2</h3><p>VP 了一场 Global Round，结果 A~E 难度 1900-，F~H 难度 3200+。</p>
+<h3 id="Day-1"><a href="#Day-1" class="headerlink" title="Day -1"></a>Day -1</h3><p>全真模拟，题目放反了顺序。看大家分太低遂拆开 Subtask，<code>puts(&quot;NO&quot;)</code> 怒拿 $66$ pts。<br>感觉机房的气氛跟当时中考前两天没什么区别。</p>
+<h3 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h3><p>甚至不知道该颓废什么了，遂决定学习模拟退火，想着万一考试能用上呢。  </p>
+<h3 id="Day-1-1"><a href="#Day-1-1" class="headerlink" title="Day 1"></a>Day 1</h3><p>$7:45$ 进场，$8:00$ 到座位上罚坐，试图缓解自己紧张的情绪。<br>$8:25$ 打开了虚拟机。<br>$8:30$ 开题，写了缺省源，把前三个题看了一遍。第四题看着太长，于是先丢掉不管。<br>$8:40$ 开始写 T1，一开始没有想到筛法，只想着用各种奇怪的特判解决掉大样例的一些情况，发现效果也不甚理想。<br>$9:50$ 踢掉了键盘的线，让监考老师帮忙修好。<br>$10:15$ 先写下了 $70$ pts 的暴力，弃掉 T1，开始看 T2。<br>$11:00$ T2 感觉完全不可做（考场上），看 T3 发现做过将 $a_{i+1}+a_{i-1}-a_i$ 转化为差分数组的题，开始仔细想 T3。<br>$11:50$ 期间码了 $24$ pts 的暴力，又发现差分数组的单谷性，于是又写了 $48$ pts 的暴力，剩下的拿模拟退火写了一种很不优秀的随机化做法（其实普通的随机化，每次随机放左或右就可以得到 $80+$ 的成绩，但考场上没有想到）。<br>$12:10$ 发现 T1 可以直接筛，随便写写过了大样例，拍了 T1 和 T3 的两个暴力。<br>$12:20$ 读了 T4，断定不可做，开始写 T2 暴力。<br>$12:54$ T2 暴力写挂了，遂放弃 T2，检查文件。<br>$12:58$ 发现自己 T3 输入文件写的 <code>variance3.in</code>，赶紧改过来。<br>$13:00$ 考试结束。<br>$13:10$ 等待收代码的时候电脑莫名其妙重启了，吓个半死。  </p>
+<p>考完直接回家等民间数据，补文化课，颓废。<br>各大 OJ 上测的不是 $148$ 就是 $152$，但 HE 的分数线大概要 $160$ 左右吧。</p>
+<h3 id="Day-2-6"><a href="#Day-2-6" class="headerlink" title="Day 2~6"></a>Day 2~6</h3><p>在家补了几天文化课，周四回班里又卷了一天。<br>期间某一天用 $5$ min 听了 T2 的思路又用 $30$ min 写完过了，感觉自己考场上降智的有点离谱。</p>
+<h3 id="Day-7"><a href="#Day-7" class="headerlink" title="Day 7"></a>Day 7</h3><p>回到机房，开始省选内容的学习。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>最终得分：$100+0+52+0=152$<br>又一次败在了 dp 上。<br>现在开始了省选知识的学习，虽然心里清楚今年省选自己希望不大，但是还是很高兴可以有机会接触更高级的知识和算法内容。希望自己以 NOIP 为诫的同时也将这次比赛视作一个契机，一块通向 OI 更高峰的垫脚石。<br>要踏实、努力，积极思考。  </p>
+<p>Upd: $152$ pts 在 HE 只有 Rk $48$，卡线 2=。</p>
 
             <br />
             <p class="meta">
                 
 
-<a href="/tags/Records/"> <i class="fas fa-tags"></i>
-    Records </a>
+<a href="/tags/Others/"> <i class="fas fa-tags"></i>
+    Others </a>
 
             </p>
         </div>
@@ -194,10 +160,10 @@
 </script>
 
 
-<a class="float-left gradient btn paginationbtn" href="/uncategorized/CSP 2020/"><i class="fas fa-chevron-left"></i></a>
+<a class="float-left gradient btn paginationbtn" href="/records-2/"><i class="fas fa-chevron-left"></i></a>
 
 
-<a class="float-right gradient btn paginationbtn" href="/uncategorized/hello-world/"><i class="fas fa-chevron-right"></i></a>
+<a class="float-right gradient btn paginationbtn" href="/多项式学习笔记/"><i class="fas fa-chevron-right"></i></a>
 
     </main>
     <!-- Footer -->

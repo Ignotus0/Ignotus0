@@ -49,7 +49,7 @@ a {
 
 .gradient {
     /*background: linear-gradient(120deg, #7f70f5, #0ea0ff);*/
-    background: linear-gradient(135deg, #3cb61d, #8bee66);
+    background: linear-gradient(60deg, #ff0000, #ffd900, #ffd900,#0ae015);
     color: #fff !important;
 }
 
